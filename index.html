@@ -1,11 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>
-      Tausiq Samantaray
-    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tausiq Samantaray</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
-    Hi!
+    <header></header>
+    <main>
+      <section id="display">
+        <div id="about">
+          <p style="font-size: 2rem; font-weight: 500">Hey Everyone!</p>
+          <p style="font-size: 3.25rem; font-weight: 600">
+            I'm<span class="nowrap">Tausiq Samantaray</span>
+          </p>
+          <p>
+            I am a student, with web dev skills, enthusiasm in AI/ML,
+            Cybersecurity and Linux.
+          </p>
+          <div class="buttons">
+            <a href="https://tausiq.hashnode.dev/newsletter" target="_blank"
+              ><button>Signup Newsletter</button></a
+            >
+            <a href="https://drive.google.com/file/d/1RKcHssyi8Dk7F9Af3tTwZBiSzjFg7jBu/view?usp=sharing" target="_blank"
+              ><button>Resume</button></a
+            >
+          </div>
+        </div>
+        <figure id="image">
+          <img
+            src="https://github.com/tausiq2003.png"
+            alt="profile-picture"
+            width="460"
+            height="460"
+            id="profile"
+          />
+        </figure>
+      </section>
+      <article id="about">
+        <h3>About me</h3>
+        <p>Hey everyone!</p>
+        <p>
+          I am Tausiq Samantaray, currently pursuing IMCA at Utkal University.
+        </p>
+        <p>
+          I am currently an web developer, AI/ML enthusiast, Cybersecurity
+          enthusiast. Also, I am currently a Beta Microsoft Learn Student
+          Ambassador.
+        </p>
+        <p>
+          Currently using Arch Linux.
+          <img
+            src="images/arch.png"
+            alt="Arch Linux"
+            width="20"
+            height="20"
+            style="margin-left: 4px; position: relative; top: 4px"
+          />
+        </p>
+      </article>
+      <section class="skills">
+        <h3 style="margin-left: 2rem">Skills:</h3>
+        <div class="skillset">
+          <img src="" alt="" />
+          <h4>Python</h4>
+          <p>
+            I know procedural, Object-Oriented, Functional approaches in Python.
+            Can work in different libraries by referring to docs. Worked with
+            beautifulsoup, discord-py, numpy, pandas, matplotlib, pickle, csv,
+            flask, django, etc.
+          </p>
+        </div>
+        <div class="skillset">
+          <img src="" alt="" />
+          <h4>Data Structures and Algorithms</h4>
+          <p>
+            Being skillful in Data Structures and Algorithms is not only helpful
+            in interviews, but also used in Development and in real world.
+            Currently I know till linear Data Structures.
+          </p>
+        </div>
+        <div class="skillset">
+          <img src="" alt="" />
+          <h4>Web dev</h4>
+          <p>
+            Experienced on Frontend and little bit of ReactJS. Can deploy on
+            Azure. Worked on Django, Flask, PHP. Databases: SQLite, MySQL.
+          </p>
+        </div>
+        <div class="skillset">
+          <img src="" alt="" />
+          <h4>AI/ML</h4>
+          <p>Working on it soon.</p>
+        </div>
+        <div class="skillset">
+          <img src="" alt="" />
+          <h4>Cybersecurity</h4>
+          <p>Working on it soon.</p>
+        </div>
+      </section>
+      <section id="contact">
+        <div>
+          <h3>Connect with me:</h3>
+          <p>You can connect with me via:</p>
+          <div class="socials">
+            <a
+              href="https://www.twitter.com/tausiqtweets"
+              target="_blank"
+              class="links"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/tausiq-samantaray/"
+              target="_blank"
+              class="links"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href="https://youtube.com/@tausiqsamantaray"
+              target="_blank"
+              class="links"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a
+              href="https://github.com/tausiq2003"
+              target="_blank"
+              class="links"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+        <div id="message">
+          <h3>Contact me:<span style="font-style: italic; font-size: 1rem; display: block; margin-bottom: 1em;">(Powered by formbold.com)</span></h3>
+            <form action="https://app.formbold.com/s/oWPMa" method="POST">
+            <input type="text" name="name" placeholder="Name" autocomplete="off" autofocus required/>
+            <input type="email" name="email" placeholder="Email" autocomplete="off" autofocus required/>
+            <textarea
+              name="message"
+              placeholder="Type your message here..."
+              cols="30"
+              rows="10"
+              minlength=50
+              autocomplete="off", 
+              autofocus
+              required
+            ></textarea>
+            <button
+              style="margin-top: 1em; float: right; font-size: 1.125em"
+              type="submit"
+            >
+              SEND<i
+                class="fa fa-paper-plane"
+                aria-hidden="true"
+                style="font-size: 1.125rem"
+              ></i>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="./nav.js"></script>
+    <!-- <script src="./script.js"></script> -->
+    <script src="./footer.js"></script>
   </body>
 </html>
