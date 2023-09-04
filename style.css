@@ -72,11 +72,17 @@ body{
     font-weight: 500;
     line-height: 2rem;
 }
-nav{
+.nav{
     display: flex;
     justify-content: space-between;
     
 }
+main{
+    overflow-x: visible;
+    width: 100%;
+    
+}
+
 ul{
     display: flex;
     list-style-type: none;
@@ -85,6 +91,7 @@ ul{
     margin-right: 0.25em;
     
 }
+
 #display{
     display: flex;
     flex-wrap: wrap;
@@ -92,7 +99,6 @@ ul{
     justify-content: space-between;
 }
 .nav-anchor{
-    
     font-size: 1.125rem;
     text-transform:capitalize;
     transition: all 0.5s ease;
@@ -117,15 +123,27 @@ h1,h2,h3,h4,h5,h6{
 #profile{
     border-radius: 50%;
 }
+figure {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto; 
+}
 
 #contact{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* margin-top: 1rem;     */
+  
 }
 #message{
-    margin-top: 1rem;
+    
     margin-right: 1rem;
 }
 input{
@@ -149,13 +167,37 @@ input, textarea{
 .projects{
     margin-left: 2rem;
 }
+#container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.projectsmain{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+#blogs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.blog{
+    width: 25%;
+    height: auto;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    flex-shrink: 1;
+    margin-bottom: 2em;
+}
+
 button{
     transform: scale(1);
     border: none;
     cursor: pointer;
     border-radius: 5px;
     background-color: var(--primary-color);
-    /* border: 3px solid linear-gradient(to left, #743ad5, #d53a9d); */
+    
     padding: 0.5rem 1rem; 
     color: var(--light-color);
     font-size: 1rem;
@@ -176,32 +218,40 @@ footer{
    
 }
 @media screen and (max-width: 800px){
-
+    *{
+        margin: 0 0 0 0.5rem;
+    }
     body{
-        overflow-y:visible;
+        overflow-x:hidden;
+        line-height: 3rem;
     }
-    ul{
-        display: none;
-    }
-    nav{
-        position: relative;
-    }
-    main,footer{
-        text-align:center;
 
+
+  
+    i:not(button > i, span > i){
+        margin-right: 3rem;
     }
-    /* .hamburger{
-        margin-right: .2em;
+    figure {
+        width: 80%;
+        margin: auto;
+      }
+    button:not(.menu-button){
+        /* margin-left: -1em; */
+        display: block;
+        width: 80%;
+        margin-right: 2em;
+        margin-bottom: 2em;
+     }
+       .menu-icon{
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        width: 2rem;
-        height: 0.2rem;
-        background-color: var(--light-color);
-        border-radius: 10px;
-
-    } */
+    }
+    .header-title-line{
+        padding: 0.25rem 0.5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 2em;
+        justify-content: space-around;
+    }
     .menu-button{
         background-color: transparent;
         border:none;
@@ -211,15 +261,24 @@ footer{
         justify-content: center;
         align-items: center;
         position: relative;
+        
     
     }
+    .blog{
+        width: 80%;
+    }
     .menu-icon, .menu-icon::before, .menu-icon::after{
+   
         background-color: var(--light-color);
+        margin-right: 2rem;
         width: 40px;
         height: 5px;
         border-radius: 5px;
         position: absolute;
         transition: all 0.5s;
+        transform: translateY(12px);
+        float: right;
+
         
     }
     .menu-icon::before,
@@ -227,10 +286,10 @@ footer{
         content: "";
     }
     .menu-icon::before{
-        transform: translate(-20px, -12px);
+        transform: translateY(-12px);
     }
     .menu-icon::after{
-        transform: translate(-20px, 12px);
+        transform: translateY(12px);
     }
     :is(header:hover, header:focus-within) .menu-icon{
         background-color: transparent;
@@ -249,14 +308,52 @@ footer{
         display: block;
         
     }
-
-    /* .hamburger::before{
-        position: absolute;
-        content: '';
-        transform: translateY(-0.5rem);
-
-
-
-    } */
+    nav{
+        background-color: var(--low-priority);
+        display: none;
+        transform-origin: top center;
+        animation: showMenu 0.5s ease-in-out forwards;
+    
+    }
+    
+    @keyframes showMenu{
+        0%{
+            transform: scaleY(0);
+    
+        }
+        80%{
+            transform: scaleY(1.2);
+        }
+        100%{
+            transform: scaleY(1);
+        }
+    }
+    
+    nav ul{
+        list-style-type: none;
+        display:flex;
+        flex-flow: column nowrap;
+    
+    }
+    nav li{
+        padding: 0.5rem;
+    
+    }
+    nav a{
+        display: block;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    
+    }
+    nav a:any-link{
+        color: var(--light-color);
+        font-weight: bold;
+        text-decoration: none;
+    }
+    nav a:hover, a:focus{
+        transform: scale(1.2);
+        transition: all 0.3s;
+    }
 
 }
