@@ -219,15 +219,28 @@ footer{
 }
 @media screen and (max-width: 800px){
     *{
-        margin: 0 0 0 0.5rem;
+        margin: 0 0 0 1px;
     }
     body{
         overflow-x:hidden;
         line-height: 3rem;
+        font-size: 1rem;
     }
-
-
-  
+    h1,h2,h3,h4,h5,h6{
+        font-size: 1.5rem;
+    }
+    .hey{
+        font-size: 1.75rem;
+    }
+    .hello{
+        font-size: 2rem;
+    }
+    button > i{
+        margin-left: 1em;
+    }
+    #about{
+        margin-left: 1px;
+    }
     i:not(button > i, span > i){
         margin-right: 3rem;
     }
@@ -261,6 +274,8 @@ footer{
         justify-content: center;
         align-items: center;
         position: relative;
+        z-index: 1;
+        margin-left: 2rem;
         
     
     }
@@ -277,7 +292,8 @@ footer{
         position: absolute;
         transition: all 0.5s;
         transform: translateY(12px);
-        float: right;
+
+
 
         
     }
@@ -307,12 +323,18 @@ footer{
     :is(header:hover, header:focus-within) nav{
         display: block;
         
+        
     }
     nav{
         background-color: var(--low-priority);
         display: none;
+        position: absolute;
+        width: 100%;
+
+        
+        /* transform: translate(-50%, -50%); */
         transform-origin: top center;
-        animation: showMenu 0.5s ease-in-out forwards;
+        animation: showMenu 0.5s ease-in-out;
     
     }
     
